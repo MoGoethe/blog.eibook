@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo</title>
+	<link rel="stylesheet" href="css/icon.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+<style>
+	.notice{
+		width: 335px;
+		height: 92px;
+		background-color: #ccc;
+		margin-top: 10px;
+	}
+</style>
+</head>
+<body>
+
+<i class="anticon anticon-step-forward"></i>
+<button id="btn">点击</button>
+
+
+
+<script src="./js/jquery.min.js"></script>
+<script>
+	$("#btn").click(function(){
+		$("body").append('<div class="notice move-right-enter move-right-enter-active"></div>')
+	})
+	$(document).on('click','.notice',function(){
+		var _this = $(this);
+		_this.removeClass("move-right-enter move-right-enter-active").addClass("zoom-up-leave zoom-up-leave-active");
+		setTimeout(function(){
+			_this.remove();
+		},350)
+	})
+</script>
+</body>
+</html>
