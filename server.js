@@ -29,7 +29,7 @@ app.use("/img",express.static(__dirname+'/img'));
 app.use("/lib",express.static(__dirname+'/lib'));
 
 app.get("/",(req,res)=>{
-	res.send("a")
+	res.send("text server nginx!")
 })
 
 //启动服务
