@@ -29,7 +29,7 @@ app.use("/img",express.static(__dirname+'/img'));
 app.use("/lib",express.static(__dirname+'/lib'));
 
 app.get("/",(req,res)=>{
-	res.send("text server nginx crontab auto updated?")
+	res.send("text server nginx crontab auto updated??")
 })
 
 //启动服务
